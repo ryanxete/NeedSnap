@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import User
+from .models import Address
+from .models import Service
 
 class CustomUserAdmin(UserAdmin):
-    pass
 
-# Register your models here.
-admin.site.register(User, CustomUserAdmin)
+    admin.site.register(User)
+    admin.site.register(Service)
+    admin.site.register(Address)
