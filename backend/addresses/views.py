@@ -14,7 +14,7 @@ def get_all_addresses(request):
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def user_addresses(request):
+def user_address(request):
     print(
         'User ', f"{request.user.id} {request.user.email} {request.user.username}")
     if request.method == 'POST':
@@ -24,7 +24,7 @@ def user_addresses(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        cars = Address.objects.filter(user_id=request.user.id)
-        serializer = AddressSerializer(cars, many=True)
+        address = Address.objects.filter(user_id=request.user.id)
+        serializer = AddressSerializer(address, many=True)
         return Response(serializer.data)
 
