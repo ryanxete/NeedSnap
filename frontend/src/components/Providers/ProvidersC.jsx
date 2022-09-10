@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Providers() {
+function ProvidersC() {
   return (
     <div>Providers</div>
   )
 }
 
-export default Providers
+export default ProvidersC
