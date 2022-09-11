@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import WWeDoW from "../../components/About/WWeDoW";
+import './CarWash.css'
+import PopUp from "../../components/PopUp/PopUp";
 
 function CarWash() {
   const [user, token] = useAuth();
   const [carwash, setCarWash] = useState([]);
+  const [popupbtn, setPopupbtn] = useState(false)
 
   useEffect(() => {
     // debugger
@@ -33,12 +36,20 @@ function CarWash() {
   return (
     <div>
       <WWeDoW />
-      {carwash &&
-          carwash.map((carwash) => (
-            <p key={carwash.id}>
-              {carwash.username} {carwash.email}
-            </p>
-          ))}
+      <div className='data'>
+          {carwash.map((entry, index)=>{
+          return (
+            <div key={index}      className='entered'>
+              <h1 className='name'><strong>{entry.username}</strong></h1>
+              <h4 className='artist'>{entry.email}</h4>
+              <button onClick={() => setPopupbtn(true)} className="btn">More Info</button>
+              <PopUp trigger={popupbtn} setTrigger={setPopupbtn}>
+                <h3>the popup b</h3>
+              </PopUp>
+            </div>
+          );
+          })}
+      </div>
     </div>
   )
 }

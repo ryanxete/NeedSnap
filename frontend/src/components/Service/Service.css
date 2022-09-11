@@ -6,14 +6,14 @@
     margin: 3rem;
 }
 
-.img2 {
-    width: 631px;
-    height: 500px;
-}
-
 .img3 {
     width: 581px;
     height: 500px;
+}
+
+.img3:hover {
+    box-shadow: 6px 6px 12px black;
+    transform: scale(1.02);
 }
 
 .choose {
@@ -33,6 +33,7 @@
     background-color: black;
     color: whitesmoke;
     border: 2px solid black;
+    width: 99px;
     /* height: 500px;
     padding-top: 30rem; */
     /* position: absolute; 

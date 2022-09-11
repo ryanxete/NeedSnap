@@ -11,7 +11,7 @@ function Service() {
         <h2 className='choose'>Choose your prefered service from the options below:</h2>
         <div className="images">
                 <a href='/carwash'>
-                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/andre-tan-pRppMPh4Zho-unsplash.jpg")} alt="carwash" className='img2'/>
+                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/andre-tan-pRppMPh4Zho-unsplash.jpg")} alt="carwash" className='img3'/>
                 </a>
                 <button onClick={() => navigate("/carwash")} className="btn">Car Wash</button>
                 <a href="/cartint">

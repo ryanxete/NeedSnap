@@ -12,6 +12,7 @@ p {
     margin: 1rem 7rem 0 7rem;
     border: 1px solid grey;
     background-color:black;
+    border-radius: 18px;
     color: rgb(209, 214, 214);
     padding: 1rem;
 }

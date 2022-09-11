@@ -14,6 +14,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-var cors = require('cors');
-App.use(cors())
