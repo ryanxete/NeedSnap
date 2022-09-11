@@ -8,11 +8,18 @@ p {
     justify-content: center;
 }
 
-.about {
+.text {
     margin: 1rem 7rem 0 7rem;
+    border: 1px solid grey;
+    background-color: rgb(226, 224, 224);
+    padding: 1rem;
 }
 
-img {
-    height: 40%;
+.about {
+    height: 540px; 
+}
+
+.img1 {
+    height: 370px;
     width: 100%;
 }

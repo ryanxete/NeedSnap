@@ -1,0 +1,35 @@
+.images {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 3rem;
+}
+
+.img2 {
+    width: 631px;
+}
+
+.img3 {
+    width: 581px;
+}
+
+.choose {
+    border: 1px solid grey;
+    margin: 1rem 11rem 0 11rem;
+    background-color: rgb(226, 224, 224);
+    padding: 1rem;
+}
+
+ .btn {
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid black;
+    /* position: absolute; 
+    top: 10%;
+    left: 30%;
+    transform: translate(0,50%,0,0); */
+} 
+
+.btn:hover {
+    background-color: rgb(79, 47, 47);
+}
