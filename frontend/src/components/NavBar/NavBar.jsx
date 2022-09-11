@@ -17,7 +17,7 @@ const Navbar = () => {
         </li>
         <li>
           {user ? (
-            <button onClick={logoutUser} className="btn">Logout</button>
+            <button onClick={logoutUser}>Logout</button>
           ) : (
             <button onClick={() => navigate("/login")}>Login</button>
           )}

@@ -11,8 +11,14 @@ p {
 .text {
     margin: 1rem 7rem 0 7rem;
     border: 1px solid grey;
-    background-color: rgb(226, 224, 224);
+    background-color:black;
+    color: rgb(209, 214, 214);
     padding: 1rem;
+}
+
+.text:hover {
+    background-color: rgb(79, 47, 47);
+    color: rgb(209, 214, 214);
 }
 
 .about {
@@ -20,6 +26,6 @@ p {
 }
 
 .img1 {
-    height: 370px;
+    height: 490px;
     width: 100%;
 }
