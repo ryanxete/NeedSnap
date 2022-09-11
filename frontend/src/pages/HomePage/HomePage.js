@@ -2,8 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import AboutUs from "../../components/About/AboutUs";
-
 import axios from "axios";
+import "./HomePage.css";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -13,10 +13,10 @@ const HomePage = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetchCars();
+    fetchServices();
   }, [token]);
 
-  const fetchCars = async () => {
+  const fetchServices = async () => {
     try {
       let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
         headers: {
@@ -31,14 +31,14 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h1>Welcome to NeedSnap, {user.username}!</h1>
+      <h1 className="welcome">Welcome {user.username}!</h1>
       <AboutUs />
-      {cars &&
+      {/* {cars &&
         cars.map((car) => (
           <p key={car.id}>
             {car.year} {car.model} {car.make}
           </p>
-        ))}
+        ))} */}
     </div>
   );
 };

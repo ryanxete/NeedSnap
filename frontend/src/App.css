@@ -15,6 +15,7 @@ html {
 
 p {
   font-size: 20px;
+  color: black;
 }
 
 button {
@@ -34,10 +35,12 @@ button:hover {
 }
 
 .container {
+  background-image: url(/src/needsnap-resources/grey-aesthetic-wallpaper-whatspaper-5.jpeg);
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 100%;
   overflow: auto;
   text-align: center;
+  background-color: rgb(205, 194, 181);
 }
 
 .form {
@@ -46,6 +49,8 @@ button:hover {
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form input {
