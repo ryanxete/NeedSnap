@@ -5,6 +5,8 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
 from django.http import HttpRequest
 User = get_user_model()
 
@@ -33,3 +35,10 @@ class ChangeUserServiceView(TokenRefreshView):
         req.__setattr__('data', {"refresh": str(token)})
 
         return super().post(req)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_all_users(request):
+    users = User.objects.all()
+    serializer = RegistrationSerializer(users, many=True)
+    return Response(serializer.data)
