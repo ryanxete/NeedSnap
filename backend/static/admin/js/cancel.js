@@ -15,8 +15,8 @@
         function handleClick(event) {
             event.preventDefault();
             const params = new URLSearchParams(window.location.search);
-            if (params.has('_popup')) {
-                window.close(); // Close the popup.
+            if (params.has('_AddressPopup')) {
+                window.close(); // Close the AddressPopup.
             } else {
                 window.history.back(); // Otherwise, go back.
             }

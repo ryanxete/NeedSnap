@@ -4,12 +4,14 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import WWeDoW from "../../components/About/WWeDoW";
 import './CarWash.css'
-import PopUp from "../../components/PopUp/PopUp";
+import AddressPopup from "../../components/PopUp/AddressPopup";
+import EmailPopup from "../../components/PopUp/EmailPopup";
 
 function CarWash() {
   const [user, token] = useAuth();
   const [carwash, setCarWash] = useState([]);
-  const [popupbtn, setPopupbtn] = useState(false)
+  const [AddressPopupbtn, setAddressPopupbtn] = useState(false)
+  const [EmailPopupbtn, setEmailPopupbtn] = useState(false)
 
   useEffect(() => {
     // debugger
@@ -42,10 +44,14 @@ function CarWash() {
             <div key={index}      className='entered'>
               <h1 className='name'><strong>{entry.username}</strong></h1>
               <h4 className='artist'>{entry.email}</h4>
-              <button onClick={() => setPopupbtn(true)} className="btn">More Info</button>
-              <PopUp trigger={popupbtn} setTrigger={setPopupbtn}>
-                <h3>the popup b</h3>
-              </PopUp>
+              <button onClick={() => setAddressPopupbtn(true)} className="btn"><p>Show On Map</p></button>
+              <AddressPopup trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn}>
+                <h3>the AddressPopup b</h3>
+              </AddressPopup>
+              <button onClick={() => setEmailPopupbtn(true)} className="btn"><p>Send Email</p></button>
+              <EmailPopup trigger={EmailPopupbtn} setTrigger={setEmailPopupbtn}>
+                <h3>the email Popup b</h3>
+              </EmailPopup>
             </div>
           );
           })}

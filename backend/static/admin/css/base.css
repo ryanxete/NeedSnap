@@ -887,7 +887,7 @@ table#change-history tbody th {
     float: right;
 }
 
-.popup .colM {
+.AddressPopup .colM {
     width: auto;
 }
 
@@ -1038,15 +1038,15 @@ table#change-history tbody th {
     background: var(--close-button-hover-bg);
 }
 
-/* POPUP */
-.popup #content {
+/* AddressPopup */
+.AddressPopup #content {
     padding: 20px;
 }
 
-.popup #container {
+.AddressPopup #container {
     min-width: 0;
 }
 
-.popup #header {
+.AddressPopup #header {
     padding: 10px 20px;
 }

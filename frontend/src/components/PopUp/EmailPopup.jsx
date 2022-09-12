@@ -1,7 +1,7 @@
 import React from 'react'
 import "./PopUp.css"
 
-function PopUp(props) {
+function EmailPopup(props) {
   return (props.trigger) ? (
     <div className='popup'>
         <div className="popup-inner">
@@ -12,4 +12,4 @@ function PopUp(props) {
   ) : null
 }
 
-export default PopUp
+export default EmailPopup

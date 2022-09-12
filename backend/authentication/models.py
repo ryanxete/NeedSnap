@@ -7,11 +7,10 @@ from services.models import Service
 
 
 class User(AbstractUser):
-    is_provider = models.BooleanField(default=False, null=True)
+    is_provider = models.BooleanField(default=0, null=True)
     # phone_number = models.IntegerField(null=True, default=None)
     # address = models.ForeignKey(Address ,on_delete=models.CASCADE, null=True)
-    service = models.ForeignKey(Service ,on_delete=models.CASCADE, null=True, blank=True)
-
+    service = models.ForeignKey(Service ,on_delete=models.CASCADE, null=True)
 
     
     # Example (note import of models above that is commented out)

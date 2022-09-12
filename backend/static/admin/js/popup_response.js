@@ -1,16 +1,16 @@
 /*global opener */
 'use strict';
 {
-    const initData = JSON.parse(document.getElementById('django-admin-popup-response-constants').dataset.popupResponse);
+    const initData = JSON.parse(document.getElementById('django-admin-AddressPopup-response-constants').dataset.AddressPopupResponse);
     switch(initData.action) {
     case 'change':
-        opener.dismissChangeRelatedObjectPopup(window, initData.value, initData.obj, initData.new_value);
+        opener.dismissChangeRelatedObjectAddressPopup(window, initData.value, initData.obj, initData.new_value);
         break;
     case 'delete':
-        opener.dismissDeleteRelatedObjectPopup(window, initData.value);
+        opener.dismissDeleteRelatedObjectAddressPopup(window, initData.value);
         break;
     default:
-        opener.dismissAddRelatedObjectPopup(window, initData.value, initData.obj);
+        opener.dismissAddRelatedObjectAddressPopup(window, initData.value, initData.obj);
         break;
     }
 }

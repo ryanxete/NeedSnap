@@ -181,7 +181,7 @@
 
             document.addEventListener('keyup', function(event) {
                 if (event.which === 27) {
-                    // ESC key closes popup
+                    // ESC key closes AddressPopup
                     DateTimeShortcuts.dismissClock(num);
                     event.preventDefault();
                 }
@@ -338,7 +338,7 @@
             });
             document.addEventListener('keyup', function(event) {
                 if (event.which === 27) {
-                    // ESC key closes popup
+                    // ESC key closes AddressPopup
                     DateTimeShortcuts.dismissCalendar(num);
                     event.preventDefault();
                 }

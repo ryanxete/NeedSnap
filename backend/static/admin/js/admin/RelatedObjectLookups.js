@@ -5,22 +5,22 @@
 {
     const $ = django.jQuery;
 
-    function showAdminPopup(triggeringLink, name_regexp, add_popup) {
+    function showAdminAddressPopup(triggeringLink, name_regexp, add_AddressPopup) {
         const name = triggeringLink.id.replace(name_regexp, '');
         const href = new URL(triggeringLink.href);
-        if (add_popup) {
-            href.searchParams.set('_popup', 1);
+        if (add_AddressPopup) {
+            href.searchParams.set('_AddressPopup', 1);
         }
         const win = window.open(href, name, 'height=500,width=800,resizable=yes,scrollbars=yes');
         win.focus();
         return false;
     }
 
-    function showRelatedObjectLookupPopup(triggeringLink) {
-        return showAdminPopup(triggeringLink, /^lookup_/, true);
+    function showRelatedObjectLookupAddressPopup(triggeringLink) {
+        return showAdminAddressPopup(triggeringLink, /^lookup_/, true);
     }
 
-    function dismissRelatedLookupPopup(win, chosenId) {
+    function dismissRelatedLookupAddressPopup(win, chosenId) {
         const name = win.name;
         const elem = document.getElementById(name);
         if (elem.classList.contains('vManyToManyRawIdAdminField') && elem.value) {
@@ -31,8 +31,8 @@
         win.close();
     }
 
-    function showRelatedObjectPopup(triggeringLink) {
-        return showAdminPopup(triggeringLink, /^(change|add|delete)_/, false);
+    function showRelatedObjectAddressPopup(triggeringLink) {
+        return showAdminAddressPopup(triggeringLink, /^(change|add|delete)_/, false);
     }
 
     function updateRelatedObjectLinks(triggeringLink) {
@@ -52,7 +52,7 @@
         }
     }
 
-    function dismissAddRelatedObjectPopup(win, newId, newRepr) {
+    function dismissAddRelatedObjectAddressPopup(win, newId, newRepr) {
         const name = win.name;
         const elem = document.getElementById(name);
         if (elem) {
@@ -77,7 +77,7 @@
         win.close();
     }
 
-    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {
+    function dismissChangeRelatedObjectAddressPopup(win, objId, newRepr, newId) {
         const id = win.name.replace(/^edit_/, '');
         const selectsSelector = interpolate('#%s, #%s_from, #%s_to', [id, id, id]);
         const selects = $(selectsSelector);
@@ -96,7 +96,7 @@
         win.close();
     }
 
-    function dismissDeleteRelatedObjectPopup(win, objId) {
+    function dismissDeleteRelatedObjectAddressPopup(win, objId) {
         const id = win.name.replace(/^delete_/, '');
         const selectsSelector = interpolate('#%s, #%s_from, #%s_to', [id, id, id]);
         const selects = $(selectsSelector);
@@ -108,22 +108,22 @@
         win.close();
     }
 
-    window.showRelatedObjectLookupPopup = showRelatedObjectLookupPopup;
-    window.dismissRelatedLookupPopup = dismissRelatedLookupPopup;
-    window.showRelatedObjectPopup = showRelatedObjectPopup;
+    window.showRelatedObjectLookupAddressPopup = showRelatedObjectLookupAddressPopup;
+    window.dismissRelatedLookupAddressPopup = dismissRelatedLookupAddressPopup;
+    window.showRelatedObjectAddressPopup = showRelatedObjectAddressPopup;
     window.updateRelatedObjectLinks = updateRelatedObjectLinks;
-    window.dismissAddRelatedObjectPopup = dismissAddRelatedObjectPopup;
-    window.dismissChangeRelatedObjectPopup = dismissChangeRelatedObjectPopup;
-    window.dismissDeleteRelatedObjectPopup = dismissDeleteRelatedObjectPopup;
+    window.dismissAddRelatedObjectAddressPopup = dismissAddRelatedObjectAddressPopup;
+    window.dismissChangeRelatedObjectAddressPopup = dismissChangeRelatedObjectAddressPopup;
+    window.dismissDeleteRelatedObjectAddressPopup = dismissDeleteRelatedObjectAddressPopup;
 
     // Kept for backward compatibility
-    window.showAddAnotherPopup = showRelatedObjectPopup;
-    window.dismissAddAnotherPopup = dismissAddRelatedObjectPopup;
+    window.showAddAnotherAddressPopup = showRelatedObjectAddressPopup;
+    window.dismissAddAnotherAddressPopup = dismissAddRelatedObjectAddressPopup;
 
     $(document).ready(function() {
-        $("a[data-popup-opener]").on('click', function(event) {
+        $("a[data-AddressPopup-opener]").on('click', function(event) {
             event.preventDefault();
-            opener.dismissRelatedLookupPopup(window, $(this).data("popup-opener"));
+            opener.dismissRelatedLookupAddressPopup(window, $(this).data("AddressPopup-opener"));
         });
         $('body').on('click', '.related-widget-wrapper-link', function(e) {
             e.preventDefault();
@@ -131,7 +131,7 @@
                 const event = $.Event('django:show-related', {href: this.href});
                 $(this).trigger(event);
                 if (!event.isDefaultPrevented()) {
-                    showRelatedObjectPopup(this);
+                    showRelatedObjectAddressPopup(this);
                 }
             }
         });
@@ -148,7 +148,7 @@
             const event = $.Event('django:lookup-related');
             $(this).trigger(event);
             if (!event.isDefaultPrevented()) {
-                showRelatedObjectLookupPopup(this);
+                showRelatedObjectLookupAddressPopup(this);
             }
         });
     });
