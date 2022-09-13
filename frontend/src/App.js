@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import Provider from "./pages/Provider/Provider";
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/provider"
+          element={
+            <PrivateRoute>
+              <Provider />
             </PrivateRoute>
           }
         />
