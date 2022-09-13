@@ -16,10 +16,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1 className="welcome">Welcome {user.username}!</h1>
-      <PrivateRoute>
       <AboutUs />
       <Service />
-      </PrivateRoute>
     </div>
   );
 };

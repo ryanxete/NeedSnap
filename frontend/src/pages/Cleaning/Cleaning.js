@@ -16,6 +16,7 @@ function Cleaning() {
   useEffect(() => {
     // debugger
     fetchCleaning();
+    console.log(user)
     // console.log(Cleaning)
   }, [token]);
 
