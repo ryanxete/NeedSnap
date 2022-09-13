@@ -31,7 +31,8 @@ button {
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(79, 47, 47);
+  background-color: rgb(42, 42, 83);
+  box-shadow: 6px 6px 12px black;
 }
 
 .container {
@@ -40,7 +41,7 @@ button:hover {
   max-width: 100%;
   overflow: auto;
   text-align: center;
-  background-color: rgb(205, 194, 181);
+  background-color: rgb(209, 214, 214);
 }
 
 .form {

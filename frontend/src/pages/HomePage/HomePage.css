@@ -1,6 +1,9 @@
 .welcome {
-    background-color: black;
-    color: rgb(214, 214, 214);
+    background-color: rgba(141, 131, 131, 0);
+    color: black;
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
-}
+    font-weight: bolder;
+    border-bottom: double 8px rgba(26, 25, 25, 0.694);
+    margin: 0rem 10rem 1.5rem 10rem;
+}   

@@ -77,9 +77,9 @@ const RegisterPage = () => {
         </label>
         <label>
           Choose your Preferred Service:<br/>
-          <select onChange={(event) => setService(event.target.value)} name="" id="" value={service}>
-            <option value="1">Car Wash</option>
-            <option value="2">Car Tint</option>
+          <select onChange={(event) => setService(event.target.value)} name="" id="" value={formData.service}>
+            <option value="1">Cleaning</option>
+            <option value="2">Plumbing </option>
             <option value="Null">Decide Later</option>
           </select>
         </label>

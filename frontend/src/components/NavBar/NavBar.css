@@ -2,7 +2,7 @@ ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  margin-top: 0;
+  margin: 0rem 10rem 0rem 10rem;
 }
 
 li {
@@ -10,24 +10,24 @@ li {
 }
 
 .navBar {
-  background: rgb(79, 47, 47);
+  background: rgb(48, 40, 60);
   box-shadow: 4px 2px 5px gray;
-  color: rgb(205, 194, 181);
-  padding: 1.4rem 2rem;
+  color: rgb(209, 214, 214);
+  padding: 1.4rem 0rem;
   height: 4.7rem;
   width: 100%;
 }
 
 .navBar button {
   background: transparent;
-  border: 2px solid rgb(205, 194, 181);
-  color: rgb(205, 194, 181);
+  border: 2px solid rgb(209, 214, 214);
+  color: rgb(209, 214, 214);
   padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
   background: white;
-  color: rgb(79, 47, 47);
+  color: rgb(42, 42, 83);
   cursor: pointer;
 }
 
@@ -37,5 +37,5 @@ li {
 }
 
 b {
-  color: rgb(205, 194, 181);
+  color: rgb(209, 214, 214);
 }

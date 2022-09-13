@@ -12,7 +12,7 @@ def get_all_addresses(request):
     serializer = AddressSerializer(addresses, many=True)
     return Response(serializer.data)
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def user_address(request):
     print(
@@ -23,8 +23,11 @@ def user_address(request):
             serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    elif request.method == 'GET':
-        address = Address.objects.filter(user_id=request.user.id)
-        serializer = AddressSerializer(address, many=True)
-        return Response(serializer.data)
 
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def byID(request, pk):
+    print(pk)
+    address = Address.objects.filter(user=pk)
+    serializer = AddressSerializer(address, many=True)
+    return Response(serializer.data)

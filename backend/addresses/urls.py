@@ -4,4 +4,5 @@ from addresses import views
 urlpatterns = [
     path('', views.user_address),
     path('all/', views.get_all_addresses),
+    path('<int:pk>/', views.byID),
 ]

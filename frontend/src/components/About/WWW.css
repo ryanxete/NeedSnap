@@ -1,0 +1,36 @@
+.img5 {
+    width: 72%;
+    float: left;
+    height: 530px;
+    box-shadow: 6px 6px 12px black;
+}
+.ww{
+    display: flex;
+    justify-content: center;
+    height: 530px;
+    margin: 4rem;
+}
+
+.ittext {
+    margin: 1rem 7rem 1rem 7rem;
+    border: 1px solid grey;
+    background-color:rgb(42, 42, 83);
+    border-radius: 18px;
+    color: rgb(209, 214, 214);
+    padding: 1rem;
+    font-size: 1.04vw;
+    width: 20%; 
+}
+
+.ittext:hover {
+    background-color: rgb(48, 40, 60);
+    /* box-shadow: 6px 6px 12px black; */
+}
+
+.price {
+    border: 1px solid grey;
+    margin-bottom: 2rem;
+    background-color: rgb(61, 52, 76);
+    color: rgb(209, 214, 214);
+    padding: 1rem;
+}

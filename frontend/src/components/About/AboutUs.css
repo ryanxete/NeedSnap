@@ -3,30 +3,67 @@ p {
     font-size: 20px;
 }
 
-.aboutus {
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about2 {
     display: flex;
     justify-content: center;
 }
 
 .text {
-    margin: 1rem 7rem 0 7rem;
+    margin: 6rem 10rem 4rem 2rem;
     border: 1px solid grey;
-    background-color:black;
+    float: right;
+    background-color:rgb(42, 42, 83);
     border-radius: 18px;
     color: rgb(209, 214, 214);
     padding: 1rem;
+    font-size: 29px;
 }
 
 .text:hover {
-    background-color: rgb(79, 47, 47);
+    background-color: rgb(56, 66, 93);
     color: rgb(209, 214, 214);
+    /* box-shadow: 6px 6px 12px black; */
 }
 
 .about {
-    height: 540px; 
+    height: 580px; 
 }
 
 .img1 {
-    height: 490px;
-    width: 100%;
+    height: auto;
+    float: left;
+    max-width: 80%;
+    margin: 2rem 2rem 2rem 10rem;
+    box-shadow: 6px 6px 12px black;
+}
+
+.img12 {
+    max-width: 50%;
+    /* float: right; */
+
+    height: auto;
+    margin: 2rem 11rem 0rem 4rem;
+    box-shadow: 4px 6px 6px 8px black;
+}
+
+.text2 {
+    margin: 4rem 0rem 1rem 10rem;
+    border: 1px solid grey;
+    float: right;
+    background-color:rgb(42, 42, 83);
+    border-radius: 18px;
+    color: rgb(209, 214, 214);
+    padding: 1rem;
+    font-size: 29px;
+}
+
+.text2:hover {
+    background-color: rgb(56, 66, 93);
+    color: rgb(209, 214, 214);
+    /* box-shadow: 6px 6px 12px black; */
 }

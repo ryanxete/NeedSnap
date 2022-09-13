@@ -5,6 +5,7 @@ import AboutUs from "../../components/About/AboutUs";
 import axios from "axios";
 import "./HomePage.css";
 import Service from "../../components/Service/Service";
+import PrivateRoute from "../../utils/PrivateRoute";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -15,8 +16,10 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1 className="welcome">Welcome {user.username}!</h1>
+      <PrivateRoute>
       <AboutUs />
       <Service />
+      </PrivateRoute>
     </div>
   );
 };

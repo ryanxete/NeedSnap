@@ -10,14 +10,14 @@ function Service() {
     <div className='service'>
         <h2 className='choose'>Choose your prefered service from the options below:</h2>
         <div className="images">
-                <a href='/carwash'>
-                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/andre-tan-pRppMPh4Zho-unsplash.jpg")} alt="carwash" className='img3'/>
+                <a href="/Plumbing">
+                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/19497.jpg")} alt="Cleaning" className='img3'/>
                 </a>
-                <button onClick={() => navigate("/carwash")} className="btn">Car Wash</button>
-                <a href="/cartint">
-                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/window+tint+in+florida-960w.webp")} alt="carwash" className='img3'/>
+                <button onClick={() => navigate("/Plumbing")} className="btn">Plumbing </button>
+                <a href='/Cleaning'>
+                <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/8612.jpg")} alt="Cleaning" className='img3'/>
                 </a>
-                <button onClick={() => navigate("/cartint")} className="btn">Car Tint</button>
+                <button onClick={() => navigate("/Cleaning")} className="btn">Cleaning</button>
         </div>
     </div>
   )

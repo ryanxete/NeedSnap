@@ -1,12 +1,14 @@
 import React from 'react'
+import "./WWW.css"
 
 function WWeDoW() {
   return (
       <div className='wwd'>
         <div className='ww'>
-          <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/istockphoto-1394853360-170667a.jpeg")} alt="road" className='img1'/>
-          <p className='text'>in NeedSnap, we have gathered some of the best CarWashes, as well as CarTint shops in Houston, Texas! where you know your car is in good hands. Here, we have selected the shops that offer the same price so it is easier for you to decide based on their locations.</p>
+          <img src={require("/Users/ryanxete/Desktop/Projects/NeedSnap/frontend/src/needsnap-resources/29298.jpg")} alt="road" className='img5'/>
+          <p className='ittext'>with <strong>NeedSnap</strong> Cleaning We make life safer, easier, and more enjoyable for you and your family—by taking care of all your house cleaning needs! Whether you’re looking for regularly scheduled home cleaning or one-time deep cleaning, we can make your home look and smell brand-new.</p>
         </div>
+          <p className='price'>The Price For This Service is $89.99 at any location</p>
       </div>
     
   )

@@ -6,8 +6,8 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import CarWash from "./pages/CarWash/CarWash";
-import CarTint from "./pages/CarTint/CarTint";
+import Cleaning from "./pages/Cleaning/Cleaning";
+import Plumbing from "./pages/Plumbing/Plumbing";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -31,8 +31,8 @@ function App() {
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/carwash" element={<CarWash />} />
-        <Route path="/cartint" element={<CarTint />} />
+        <Route path="/Cleaning" element={<Cleaning />} />
+        <Route path="/Plumbing" element={<Plumbing />} />
       </Routes>
       <Footer />
     </div>
