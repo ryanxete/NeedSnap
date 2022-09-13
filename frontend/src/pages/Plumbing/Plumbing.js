@@ -6,20 +6,22 @@ import WWeDoT from '../../components/About/WWeDoT';
 import AddressPopup from "../../components/PopUp/AddressPopup";
 import EmailPopup from "../../components/PopUp/EmailPopup";
 
-function CarTint() {
+function Plumbing() {
 
   const [user, token] = useAuth();
-  const [CarTint, setCarTint] = useState([]);
+  const [Plumbing, setPlumbing] = useState([]);
   const [AddressPopupbtn, setAddressPopupbtn] = useState(false)
   const [EmailPopupbtn, setEmailPopupbtn] = useState(false)
+  const [query, setQuery] = useState("")
+
 
   useEffect(() => {
     // debugger
-    fetchCarTint();
-    // console.log(CarTint)
+    fetchPlumbing();
+    // console.log(Plumbing)
   }, [token]);
 
-  const fetchCarTint = async () => {
+  const fetchPlumbing = async () => {
     try {
       // debugger
       let response = await axios.get("http://127.0.0.1:8000/api/auth/users/all/", {
@@ -27,29 +29,43 @@ function CarTint() {
       });
       // debugger
       let isCT = response.data.filter(res => res.is_provider == 1 && res.service == 2)
-      setCarTint(isCT);
+      setPlumbing(isCT);
       console.log("yey:", isCT)
-      console.log(CarTint)
+      console.log(Plumbing)
     } catch (error) {
       console.log(error.response.data);
     }
   };
 
 
+  const item  = Plumbing;
+  // console.log("i:", Cleaning)
+  // console.log("item:", item)
+
+  const getfilterred = (query, item) => {
+    if (!query) {
+      return item
+    }
+    return item.filter((each) => each.username.includes(query))
+  }
+
+  let filterred = getfilterred(query, item)
+
   return (
     <div>
     <WWeDoT />
+      <label className="bokon">Search By Name</label>
+      <input type="text" onChange={(e) => setQuery(e.target.value)}/>
       <div className='data'>
-        {CarTint.map((entry, index)=>{
+        {filterred.map((entry, index)=>{
         return (
           <div key={index}      className='entered'>
             <h1 className='name'><strong>{entry.username}</strong></h1>
             <h4 className='artist'>{entry.email}</h4>
             <button onClick={() => setAddressPopupbtn(true)} className="btn"><p>Show On Map</p></button>
-            <AddressPopup trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn} props={CarTint}/>
+            <AddressPopup trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn} props={Plumbing}/>
             <button onClick={() => setEmailPopupbtn(true)} className="btn"><p>Send Email</p></button>
             <EmailPopup trigger={EmailPopupbtn} setTrigger={setEmailPopupbtn}>
-              <h3>the email Popup b</h3>
             </EmailPopup>
           </div>
         );
@@ -59,4 +75,4 @@ function CarTint() {
   )
 }
 
-export default CarTint
+export default Plumbing

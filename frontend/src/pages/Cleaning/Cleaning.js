@@ -12,6 +12,8 @@ function Cleaning() {
   const [Cleaning, setCleaning] = useState([]);
   const [AddressPopupbtn, setAddressPopupbtn] = useState(false)
   const [EmailPopupbtn, setEmailPopupbtn] = useState(false)
+  const [query, setQuery] = useState("")
+
 
   useEffect(() => {
     // debugger
@@ -35,11 +37,26 @@ function Cleaning() {
     }
   };
 
+  const item  = Cleaning;
+  // console.log("i:", Cleaning)
+  // console.log("item:", item)
+
+  const getfilterred = (query, item) => {
+    if (!query) {
+      return item
+    }
+    return item.filter((each) => each.username.includes(query))
+  }
+
+  let filterred = getfilterred(query, item)
+
   return (
     <div>
       <WWeDoW />
+      <label className="bokon">Search By Name</label>
+      <input type="text" onChange={(e) => setQuery(e.target.value)}/>
       <div className='data'>
-          {Cleaning.map((entry, index)=>{
+          {filterred.map((entry, index)=>{
           return (
             <div key={index}      className='entered'>
               <h1 className='name'><strong>{entry.username}</strong></h1>
@@ -48,7 +65,6 @@ function Cleaning() {
               <AddressPopup trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn} props={Cleaning}/>
               <button onClick={() => setEmailPopupbtn(true)} className="btn"><p>Send Email</p></button>
               <EmailPopup trigger={EmailPopupbtn} setTrigger={setEmailPopupbtn}>
-                <h3>the email Popup b</h3>
               </EmailPopup>
             </div>
           );

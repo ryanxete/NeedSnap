@@ -3,6 +3,7 @@ ul {
   justify-content: space-between;
   list-style-type: none;
   margin: 0rem 10rem 0rem 10rem;
+  width: auto;
 }
 
 li {
@@ -39,6 +40,7 @@ li {
 
 b {
   color: rgb(209, 214, 214);
+  position: absolute;
 }
 
 .navigate {
@@ -61,5 +63,5 @@ b {
 }
 
 .provider {
-  margin: 0.38rem 0rem 1rem 70rem;
+  margin: 0.38rem 0rem 1rem 60rem;
 }

@@ -16,12 +16,12 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: whitesmoke;
+    background-color: rgba(120, 120, 120, 0.095);
 }
 
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
-    right: 16px;
+    right: 36px;
     
 }

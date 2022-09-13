@@ -11,9 +11,9 @@ form {
 
 .form-grid{
     background-color: rgba(150, 146, 146, 0.594);
-    box-shadow: 0 0 10px #000000;
+    box-shadow: 6px 6px 12px 6px black;
     border-radius: 15px;
-    width: 552px;
+    width: 42%;
 }
 
 .button {
@@ -24,7 +24,7 @@ form {
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 20px;
-    display: flexbox;
+    /* display: flexbox; */
     background-color: rgb(53, 32, 57);
     color: rgb(219, 219, 219)
 }

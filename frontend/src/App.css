@@ -19,9 +19,9 @@ p {
 }
 
 button {
-  background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  background-color: black;
+  border: 2px solid black;
+  color: rgb(209, 214, 214);
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -31,7 +31,7 @@ button {
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(42, 42, 83);
+  background-color: rgb(61, 33, 64);
   box-shadow: 6px 6px 12px black;
 }
 

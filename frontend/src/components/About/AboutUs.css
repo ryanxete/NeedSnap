@@ -6,12 +6,13 @@ p {
 .about {
     display: flex;
     justify-content: center;
-    height: 70%;
+    max-height: 560px;
 }
 
 .about2 {
     display: flex;
     justify-content: center;
+    max-height: 523px;
 }
 
 .text {
@@ -22,7 +23,7 @@ p {
     border-radius: 18px;
     color: rgb(209, 214, 214);
     padding: 1rem;
-    font-size: 29px;
+    font-size: 23px;
 }
 
 .text:hover {
@@ -40,7 +41,7 @@ p {
 }
 
 .img12 {
-    max-width: 50%;
+    max-width: 52%;
     /* float: right; */
 
     height: auto;
@@ -56,7 +57,7 @@ p {
     border-radius: 18px;
     color: rgb(209, 214, 214);
     padding: 1rem;
-    font-size: 29px;
+    font-size: 28px;
 }
 
 .text2:hover {

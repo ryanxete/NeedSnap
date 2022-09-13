@@ -1,24 +1,42 @@
 .img5 {
     width: 72%;
     float: left;
-    height: 530px;
+    height: auto;
+    box-shadow: 6px 6px 12px black;
+}
+
+.img6 {
+    width: 70%;
+    float: left;
+    height: auto;
     box-shadow: 6px 6px 12px black;
 }
 .ww{
     display: flex;
     justify-content: center;
     height: 530px;
-    margin: 4rem;
+    margin: 4rem 10rem 4rem 10rem;
 }
 
 .ittext {
-    margin: 1rem 7rem 1rem 7rem;
+    margin: 1rem 0rem 1rem 7rem;
     border: 1px solid grey;
     background-color:rgb(42, 42, 83);
     border-radius: 18px;
     color: rgb(209, 214, 214);
     padding: 1rem;
-    font-size: 1.04vw;
+    font-size: 1.2vw;
+    width: 20%; 
+}
+
+.ittext3 {
+    margin: 1rem 0rem 1rem 7rem;
+    border: 1px solid grey;
+    background-color:rgb(42, 42, 83);
+    border-radius: 18px;
+    color: rgb(209, 214, 214);
+    padding: 1rem;
+    font-size: 1.12vw;
     width: 20%; 
 }
 

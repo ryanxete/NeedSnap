@@ -6,7 +6,6 @@ import "./RegisterPage.css";
 
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
-  const [service, setService] = useState("")
   const defaultValues = {
     username: "",
     email: "",

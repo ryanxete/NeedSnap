@@ -49,7 +49,7 @@ function Map(Cleaning) {
         //   console.log("user:", user)
           // debugger
           setAddress(response.data);
-          console.log("addy:", address)
+          // console.log("addy:", address)
         } catch (error) {
           console.log(error.response.data);
         }
@@ -59,7 +59,7 @@ function Map(Cleaning) {
   return (
         <div className="mapouter">
             <div className="gmap_canvas">
-                <iframe width="535" height="388" id="gmap_canvas" src="https://maps.google.com/maps?q=333,NPlankintonAve,Milwaukee,WI,53203&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
+                <iframe width="100%" height="488" id="gmap_canvas" src="https://maps.google.com/maps?q=1915,mcduffieSt,Houston,TX,77019&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
                 </iframe>
             </div>
         </div>
