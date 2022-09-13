@@ -6,6 +6,7 @@ p {
 .about {
     display: flex;
     justify-content: center;
+    height: 70%;
 }
 
 .about2 {
@@ -30,14 +31,10 @@ p {
     /* box-shadow: 6px 6px 12px black; */
 }
 
-.about {
-    height: 580px; 
-}
-
 .img1 {
     height: auto;
     float: left;
-    max-width: 80%;
+    max-width: 45%;
     margin: 2rem 2rem 2rem 10rem;
     box-shadow: 6px 6px 12px black;
 }

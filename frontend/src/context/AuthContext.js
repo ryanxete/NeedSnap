@@ -15,6 +15,7 @@ function setUserObject(user) {
     username: user.username,
     id: user.user_id,
     first_name: user.first_name,
+    is_provider: user.is_provider
   };
 }
 
@@ -59,7 +60,10 @@ export const AuthProvider = ({ children }) => {
         let loggedInUser = jwtDecode(response.data.access);
         setUser(setUserObject(loggedInUser));
         setIsServerError(false);
-        navigate("/");
+        // debugger
+        // console.log(user)
+        // if (user.is_provider) navigate("/provider");
+        if (user) navigate("/");
       } else {
         navigate("/register");
       }

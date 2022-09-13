@@ -15,11 +15,14 @@ const Navbar = () => {
             <b>NeedSnap for your Needs</b>
           </Link>
         </li>
+        <li className="provider">
+          <Link to={"/provider"} class="prov">Provider</Link>
+        </li>
         <li>
           {user ? (
-            <button onClick={logoutUser}>Logout</button>
+            <button className="btnn" onClick={logoutUser}>Logout</button>
           ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
+            <button className="btnn" onClick={() => navigate("/login")}>Login</button>
           )}
         </li>
       </ul>

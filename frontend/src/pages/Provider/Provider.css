@@ -1,0 +1,41 @@
+form {
+    display: inline-block;
+    text-align: center;
+    margin: 6rem 0rem 6rem 0rem;
+}
+
+.entry-box {
+    display: block;
+    text-align: center;
+}
+
+.form-grid{
+    background-color: rgba(150, 146, 146, 0.594);
+    box-shadow: 0 0 10px #000000;
+    border-radius: 15px;
+    width: 552px;
+}
+
+.button {
+    width: 50%;
+    height: 28px;
+    text-align: center;
+    margin: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 20px;
+    display: flexbox;
+    background-color: rgb(53, 32, 57);
+    color: rgb(219, 219, 219)
+}
+
+.entry-box h3 {
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-bottom: 8px
+} 
+
+input {
+    width: 30%;
+    text-align: center;
+}

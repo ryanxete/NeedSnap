@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   return (
     <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit} style={{ margin: "7rem 0rem 26rem 0rem" }}>
         <label>
           Username:{" "}
           <input

@@ -71,21 +71,24 @@ const RegisterPage = () => {
             onChange={handleInputChange}
           />
         </label>
+        <p style={{ fontSize: "12px" }}>
+          NOTE: Make this an uncommon password with characters, numbers, and
+          special characters!
+        </p>
         <label htmlFor="">
           Provider?
           <input type="checkbox" name="is_provider" checked={formData.is_provider} onChange={handleInputChange}/>
         </label>
-        <label>
+        {/* <label>
           Choose your Preferred Service:<br/>
           <select onChange={(event) => setService(event.target.value)} name="" id="" value={formData.service}>
             <option value="1">Cleaning</option>
             <option value="2">Plumbing </option>
             <option value="Null">Decide Later</option>
           </select>
-        </label>
+        </label> */}
         <p style={{ fontSize: "12px" }}>
-          NOTE: Make this an uncommon password with characters, numbers, and
-          special characters!
+          NOTE: If you are a Provider, after logging in, Go to the Providers Hub and add your Address + specify the Service that you provide. thank you
         </p>
         <button className="register">Register!</button>
       </form>

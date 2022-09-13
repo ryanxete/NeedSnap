@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 import Provider from "./pages/Provider/Provider";
+import CustomRoute from "./utils/CustomRoute";
 
 function App() {
   return (
@@ -23,18 +24,18 @@ function App() {
       <Navbar />
       <Routes>
         <Route
+          path="/provider"
+          element={
+            <CustomRoute>
+              <Provider />
+            </CustomRoute>
+          }
+        />
+        <Route
           path="/"
           element={
             <PrivateRoute>
               <HomePage />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/provider"
-          element={
-            <PrivateRoute>
-              <Provider />
             </PrivateRoute>
           }
         />

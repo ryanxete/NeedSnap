@@ -17,7 +17,6 @@ function Cleaning() {
     // debugger
     fetchCleaning();
     console.log(user)
-    // console.log(Cleaning)
   }, [token]);
 
   const fetchCleaning = async () => {

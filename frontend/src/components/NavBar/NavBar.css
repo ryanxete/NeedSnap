@@ -7,6 +7,7 @@ ul {
 
 li {
   font-size: 1.25rem;
+  text-decoration: none;
 }
 
 .navBar {
@@ -18,14 +19,14 @@ li {
   width: 100%;
 }
 
-.navBar button {
+.btnn {
   background: transparent;
   border: 2px solid rgb(209, 214, 214);
   color: rgb(209, 214, 214);
   padding: 0.4rem 0.5rem;
 }
 
-.navBar button:hover {
+.btnn:hover {
   background: white;
   color: rgb(42, 42, 83);
   cursor: pointer;
@@ -38,4 +39,27 @@ li {
 
 b {
   color: rgb(209, 214, 214);
+}
+
+.navigate {
+  margin-left: 30rem;
+  border: none;
+  color: rgb(209, 214, 214);
+}
+
+.navigate:hover {
+  color: rgb(42, 42, 83);;
+  box-shadow: none;
+  border: none;
+  background-color: white;
+}
+
+.prov {
+  text-decoration: none;
+  color: rgb(209, 214, 214);
+  font-size: 16px;
+}
+
+.provider {
+  margin: 0.38rem 0rem 1rem 70rem;
 }
