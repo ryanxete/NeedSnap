@@ -3,7 +3,7 @@
     margin-top: 2em;
     box-shadow: 0 0 10px #000000;
     border-radius: 15px;
-    width: 70%;
+    width: 50%;
     height: max-content;
     padding: 6px;
     margin: auto;
@@ -36,6 +36,6 @@
     color: whitesmoke;
 }
 
-.bokon {
-    margin-right: 0.8rem;
-}
+/* .bokon {
+    margin-top: 0rem;
+} */

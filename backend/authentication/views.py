@@ -20,6 +20,7 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = (AllowAny,)
     serializer_class = RegistrationSerializer
 
+
 class ChangeUserServiceView(TokenRefreshView):
     permission_classes = (IsAuthenticated,)
     authentication_classes = [JWTAuthentication]
@@ -36,7 +37,16 @@ class ChangeUserServiceView(TokenRefreshView):
 
         return super().post(req)
 
+
 @api_view(['GET'])
+@permission_classes([AllowAny])
+def get_all_users(request):
+    users = User.objects.all()
+    serializer = RegistrationSerializer(users, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['PUT'])
 @permission_classes([AllowAny])
 def get_all_users(request):
     users = User.objects.all()

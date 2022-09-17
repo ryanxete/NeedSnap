@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import WWeDoT from '../../components/About/WWeDoT';
-import AddressPopup from "../../components/PopUp/AddressPopup";
+import PAdd from "../../components/PopUp/PAdd";
 import EmailPopup from "../../components/PopUp/EmailPopup";
+import "../Cleaning/Cleaning.css"
 
 function Plumbing() {
 
@@ -63,7 +64,7 @@ function Plumbing() {
             <h1 className='name'><strong>{entry.username}</strong></h1>
             <h4 className='artist'>{entry.email}</h4>
             <button onClick={() => setAddressPopupbtn(true)} className="btn"><p>Show On Map</p></button>
-            <AddressPopup trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn} props={Plumbing}/>
+            <PAdd trigger={AddressPopupbtn} setTrigger={setAddressPopupbtn} props={Plumbing}/>
             <button onClick={() => setEmailPopupbtn(true)} className="btn"><p>Send Email</p></button>
             <EmailPopup trigger={EmailPopupbtn} setTrigger={setEmailPopupbtn}>
             </EmailPopup>

@@ -28,7 +28,7 @@ import axios from "axios";
 //         </div>
 //     )}
 
-function Map(Cleaning) {
+function CMap(Cleaning) {
     const [user, token] = useAuth();
     const [address, setAddress] = useState([]);
 
@@ -59,11 +59,11 @@ function Map(Cleaning) {
   return (
         <div className="mapouter">
             <div className="gmap_canvas">
-                <iframe width="100%" height="488" id="gmap_canvas" src="https://maps.google.com/maps?q=1915,mcduffieSt,Houston,TX,77019&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
+                <iframe width="100%" height="488" id="gmap_canvas" src="https://maps.google.com/maps?q=5138,sanfelipeSt,Houston,TX,77056&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
                 </iframe>
             </div>
         </div>
   )
 }
 
-export default Map
+export default CMap

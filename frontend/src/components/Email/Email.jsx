@@ -6,7 +6,7 @@ function Email() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', '9bozdZUv7dy5cMnze', e.target, '9bozdZUv7dy5cMnze')
+    emailjs.send('gmail', '9bozdZUv7dy5cMnze', e.target, '9bozdZUv7dy5cMnze')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
