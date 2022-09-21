@@ -24,7 +24,8 @@ async function handleSubmit(event){
     }
     await axios.post(`http://127.0.0.1:8000/api/addresses/`,addNew, {
         headers: { Authorization: "Bearer " + token,},
-      })       
+      })
+    prompt("address has been added to your profile")
 };
 
 

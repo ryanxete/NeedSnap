@@ -47,8 +47,10 @@ def get_all_users(request):
 
 
 @api_view(['PUT'])
-@permission_classes([AllowAny])
-def get_all_users(request):
+@permission_classes([IsAuthenticated])
+def update_service(request):
     users = User.objects.all()
-    serializer = RegistrationSerializer(users, many=True)
-    return Response(serializer.data)
+    serializer = RegistrationSerializer(users, data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save()
+        return Response(serializer.data)
