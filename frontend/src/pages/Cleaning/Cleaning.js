@@ -53,7 +53,7 @@ function Cleaning() {
   return (
     <div>
       <WWeDoW />
-      <label className="bokon">Search By Name</label>
+      <label className="bokon">Search By Name: </label>
       <input type="text" onChange={(e) => setQuery(e.target.value)}/>
       <div className='data'>
           {filterred.map((entry, index)=>{
