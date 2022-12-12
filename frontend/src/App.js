@@ -16,7 +16,7 @@ import Footer from "./components/Footer/Footer";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 import Provider from "./pages/Provider/Provider";
-import CustomRoute from "./utils/CustomRoute";
+import CustomRoute from "./utils/customRoute"
 
 function App() {
   return (
