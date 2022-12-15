@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="provider">
-          <Link to={"/provider"} class="prov">Account</Link>
+          <Link to={"/provider"} class="prov">My Account</Link>
         </li>
         <li>
           {user ? (
