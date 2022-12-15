@@ -39,3 +39,8 @@ input {
     width: 30%;
     text-align: center;
 }
+
+.please {
+    margin-top: 1rem;
+    border-bottom: 3px black solid;
+}
