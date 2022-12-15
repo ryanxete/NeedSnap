@@ -42,5 +42,6 @@ input {
 
 .please {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 3px black solid;
 }
