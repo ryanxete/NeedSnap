@@ -60,6 +60,7 @@ b {
   text-decoration: none;
   color: rgb(209, 214, 214);
   font-size: 16px;
+  padding-right: 1rem;
 }
 
 .provider {
